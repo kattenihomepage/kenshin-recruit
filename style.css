@@ -199,3 +199,52 @@ body {
     text-align: center;
   }
   
+  @media (max-width: 600px) {
+
+    header h1 {
+      font-size: 20px; /* ヘッダー文字を小さく */
+    }
+  
+    .main-visual img {
+      width: 90%; /* 画像を画面幅に合わせて大きく表示 */
+      max-width: none; /* 最大幅制限を解除 */
+    }
+  
+    .catch-copy {
+      font-size: 14px; /* キャッチコピー文字サイズ縮小 */
+      padding: 8px 16px; /* パディングも少し減らす */
+    }
+  
+    section h2 {
+      font-size: 20px; /* セクション見出し縮小 */
+    }
+  
+    .job-title {
+      font-size: 16px;
+    }
+  
+    .job-salary {
+      font-size: 12px;
+    }
+  
+    .job-detail {
+      font-size: 14px;
+      padding: 0 5px;
+    }
+  
+    .story-tile {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .modal-content p {
+      font-size: 16px;
+    }
+  
+    #closeModal {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+  }
+  
