@@ -11,7 +11,7 @@ jobTiles.forEach(tile => {
       detail.classList.remove('open');
       icon.textContent = '＋';
     } else {
-      detail.style.maxHeight = (detail.scrollHeight + 30) + "px";
+      detail.style.maxHeight = (detail.scrollHeight + 40) + "px";
       detail.classList.add('open');
       icon.textContent = '－';
     }
