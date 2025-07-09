@@ -14,6 +14,9 @@ jobTiles.forEach(tile => {
       detail.style.maxHeight = (detail.scrollHeight + 100) + "px";
       detail.classList.add('open');
       icon.textContent = '－';
+
+      // スクロール処理を追加
+      detail.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
   });
 });
