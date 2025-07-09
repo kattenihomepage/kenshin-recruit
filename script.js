@@ -14,33 +14,9 @@ jobTiles.forEach(tile => {
       detail.style.maxHeight = (detail.scrollHeight + 100) + "px";
       detail.classList.add('open');
       icon.textContent = '－';
-
-    // 一旦既存のtransitionendリスナーを削除してから追加することで多重登録防止
-    detail.removeEventListener('transitionend', scrollAfterExpand);
-    detail.addEventListener('transitionend', scrollAfterExpand);
-  }
-});
-
-
-function scrollAfterExpand(e) {
-  if (e.propertyName === 'max-height') {
-    const tile = e.target.closest('.job-tile');
-    const tileRect = tile.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
-
-    // タイルが画面内に収まらない場合だけスクロールする
-    if (tileRect.bottom > viewportHeight || tileRect.top < 0) {
-      // スクロール量: タイルの上端位置 + タイルの高さ - ビューポート高さ + 20px余白
-      const scrollY = window.scrollY + tileRect.top;
-      window.scrollTo({
-        top: scrollY,
-        behavior: 'smooth'
-      });
     }
-
-    e.target.removeEventListener('transitionend', scrollAfterExpand);
-  }
-}
+  });
+});
 
 // 応募ボタン
 const applyButtons = document.querySelectorAll('.applyBtn');
