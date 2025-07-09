@@ -21,10 +21,23 @@ jobTiles.forEach(tile => {
   }
 });
 
+
 function scrollAfterExpand(e) {
   if (e.propertyName === 'max-height') {
-    e.target.scrollIntoView({ behavior: 'smooth', block: 'end' });
-    // イベントを一度だけ処理するためremove
+    const tile = e.target.closest('.job-tile');
+    const tileRect = tile.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    // タイルが画面内に収まらない場合だけスクロールする
+    if (tileRect.bottom > viewportHeight || tileRect.top < 0) {
+      // スクロール量: タイルの上端位置 + タイルの高さ - ビューポート高さ + 20px余白
+      const scrollY = window.scrollY + tileRect.top;
+      window.scrollTo({
+        top: scrollY,
+        behavior: 'smooth'
+      });
+    }
+
     e.target.removeEventListener('transitionend', scrollAfterExpand);
   }
 }
