@@ -230,6 +230,7 @@ body {
     .job-detail {
       font-size: 14px;
       padding: 0 5px;
+      overflow-y: auto;
     }
   
     .story-tile {
