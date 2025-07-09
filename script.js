@@ -15,11 +15,19 @@ jobTiles.forEach(tile => {
       detail.classList.add('open');
       icon.textContent = '－';
 
-      // スクロール処理を追加
-      detail.scrollIntoView({ behavior: 'smooth', block: 'end' });
-    }
-  });
+    // 一旦既存のtransitionendリスナーを削除してから追加することで多重登録防止
+    detail.removeEventListener('transitionend', scrollAfterExpand);
+    detail.addEventListener('transitionend', scrollAfterExpand);
+  }
 });
+
+function scrollAfterExpand(e) {
+  if (e.propertyName === 'max-height') {
+    e.target.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    // イベントを一度だけ処理するためremove
+    e.target.removeEventListener('transitionend', scrollAfterExpand);
+  }
+}
 
 // 応募ボタン
 const applyButtons = document.querySelectorAll('.applyBtn');
