@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>軍神 上杉謙信 家臣募集ページ</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 筆文字風フォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>軍神 上杉謙信 家臣募集ページ</h1>
+  </header>
+
+  <div class="main-visual">
+    <img src="img/kenshin.jpg" alt="上杉謙信がPC作業する姿" />
+    <div class="catch-copy">軍神の軍勢に加わり、歴史を刻め</div>
+  </div>
+
+    <!-- ストーリー紹介セクション -->
+    <section class="story-section">
+        <h2>謙信公の理念と戦略</h2>
+        <div class="story-tile">
+          <p><strong>【理念】</strong><br>義をもって戦をなし、民を守り、越後を治めることこそ我が務めなり。</p>
+          <p><strong>【募集背景】</strong><br>北信濃侵攻にあたり、軍備増強および組織再編成を進めるため。川中島決戦へ向け、各方面の人材を広く募る。</p>
+          <p id="strategy-text"><strong>【戦略】</strong><br>戦略は参陣を決した者のみに伝える。</p>
+        </div>
+      </section>
+
+  <section>
+    <h2>募集職種</h2>
+
+    <!-- 軍師 -->
+    <div class="job-tile">
+      <div class="job-summary">
+        <div class="job-info">
+          <span class="job-title">軍師</span>
+          <span class="job-salary">給与：米俵100俵〜</span>
+        </div>
+        <div class="toggle-icon">＋</div>
+      </div>
+      <div class="job-detail">
+        <p>【業務内容】<br>戦略立案、敵情視察、謙信公への進言、軍議参加。</p>
+        <p>【勤務時間】<br>日の出から日の入りまで（戦況により変動あり）。</p>
+        <p>【勤務地】<br>越後国春日山城、及び出陣先各地。</p>
+        <p>【給与】<br>米俵100俵〜500俵（経験・功績により昇給）。</p>
+        <p>【昇給・賞与】<br>年1回昇給査定、武功に応じて随時加増。特別功績賞与あり（城、知行地拝領実績多数）。</p>
+        <p>【休日・休暇】<br>月4日（軍議及び戦況により変動）、年始参賀休暇。</p>
+        <button class="applyBtn" data-job="軍師">応募する</button>
+      </div>
+    </div>
+
+    <!-- 足軽 -->
+    <div class="job-tile">
+      <div class="job-summary">
+        <div class="job-info">
+          <span class="job-title">足軽</span>
+          <span class="job-salary">給与：米俵10俵〜</span>
+        </div>
+        <div class="toggle-icon">＋</div>
+      </div>
+      <div class="job-detail">
+        <p>【業務内容】<br>前線での突撃、防衛、陣地設営補助、荷駄運搬。</p>
+        <p>【勤務時間】<br>日の出から日の入りまで（戦況により早朝夜間勤務あり）。</p>
+        <p>【勤務地】<br>越後国春日山城周辺、または遠征先各地。</p>
+        <p>【給与】<br>米俵10俵〜30俵（戦功により昇給）。</p>
+        <p>【昇給・賞与】<br>武功に応じて随時加増。首級褒賞制度あり。</p>
+        <p>【休日・休暇】<br>月2日（軍備訓練日を除く）。</p>
+        <button class="applyBtn" data-job="足軽">応募する</button>
+      </div>
+    </div>
+
+    <!-- 槍隊 -->
+    <div class="job-tile">
+      <div class="job-summary">
+        <div class="job-info">
+          <span class="job-title">槍隊</span>
+          <span class="job-salary">給与：米俵30俵〜</span>
+        </div>
+        <div class="toggle-icon">＋</div>
+      </div>
+      <div class="job-detail">
+        <p>【業務内容】<br>槍衾形成、敵騎馬隊迎撃、隊列訓練指導。</p>
+        <p>【勤務時間】<br>日の出から日の入りまで（演武大会や夜襲対応あり）。</p>
+        <p>【勤務地】<br>越後国春日山城訓練場、前線布陣地。</p>
+        <p>【給与】<br>米俵30俵〜100俵（技能熟練度により昇給）。</p>
+        <p>【昇給・賞与】<br>年2回槍術査定、武功褒賞あり。</p>
+        <p>【休日・休暇】<br>月4日、祭礼日休暇。</p>
+        <button class="applyBtn" data-job="槍隊">応募する</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 応募完了モーダル -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <img src="img/kamon.png" alt="上杉謙信家紋" class="kamon-img" />
+      <p>汝の忠義、確かに受け取った。<br>明日より越後に参陣せよ。<br>武運長久を祈る。</p>
+      <button id="closeModal">承知</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 1561 Kenshin Uesugi Recruitment. All Rights Reserved.
+    <br>
+    <a href="https://x.com/kattenihomepage" target="_blank" rel="noopener noreferrer">
+        X(勝手にホームページ)はこちら
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

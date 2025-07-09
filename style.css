@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    font-family: 'Shippori Mincho', 'Hiragino Kaku Gothic ProN', Meiryo, serif;
+    background-color: #fdf6e3;
+    color: #333;
+    background-image: url('img/wagara.png');
+    background-repeat: repeat;
+    background-size: 300px;
+  }
+  
+  header {
+    background-color: rgba(197, 163, 0, 0.85);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .main-visual {
+    position: relative;
+    text-align: center;
+  }
+  
+  .main-visual img {
+    width: 60%;
+    height: auto;
+    max-width: 400px;
+  }
+  
+  .catch-copy {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(197, 163, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  section {
+    padding: 30px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Shippori Mincho', serif;
+    color: #fff; /* 白文字に変更 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* 文字に影を入れる */
+  }
+  
+  .job-tile {
+    border: 1px solid #c5a300;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  
+  .job-summary {
+    background: #c5a300;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .job-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .job-title {
+    font-size: 18px;
+  }
+  
+  .job-salary {
+    font-size: 14px;
+  }
+  
+  .toggle-icon {
+    font-size: 24px;
+    padding-right: 10px;
+  }
+  
+  .job-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background: #fff8dc;
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .job-detail.open {
+    padding: 10px;
+  }
+  
+  button.applyBtn {
+    background-color: #c5a300;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  button.applyBtn:hover {
+    background-color: #a88c00;
+  }
+  section + section {
+    padding-top: 10px; /* 募集職種セクションの上paddingを10pxに減らす（元は30px） */
+  }
+
+  .story-section {
+    padding: 20px;
+    padding-bottom: 10px; 
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+  }
+  
+  .story-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .story-tile {
+    background: #fff8dc; /* 募集職種詳細と同じクリーム色 */
+    border: 1px solid #c5a300;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+  }
+  
+  .modal-content {
+    background: #fffaf0;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .modal-content p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+  .kamon-img {
+    width: 100px;
+    height: auto;
+  }
+  
+  #closeModal {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #c5a300;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #closeModal:hover {
+    background: #a07f00;
+  }
+  
+  footer {
+    background-color: #eee8d5;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
